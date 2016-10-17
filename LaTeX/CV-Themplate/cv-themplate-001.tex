@@ -1,0 +1,147 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\Huge \textrm{Carlos José García Santos}}
+
+\vspace*{0.25cm}
+\ \ Quijorna, Madrid 28693
+\\
+(+34) 619262412\ \textbullet
+\ \ cj.garciasan@gmail.com
+\end{center}
+
+\hrule
+\vspace{1cm}
+
+\vspace{-0.4em}
+\subsection*{Perfil}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{Personal}}
+		{\textbf{}}
+	\\
+	\headerrow
+		{\emph{}}
+		{\emph{}}
+	\begin{itemize*}
+		\item Estudiante de Ingeniería Informática por la Universidad Politécnica de Madrid,\\ motivado y trabajador.
+		Actualmente buscando experiencia y la oportunidad de\\ adquirir conocimientos más allá de lo teórico y las aulas.
+	\end{itemize*}
+	
+
+\vspace{1.4cm}
+\hrule
+\vspace{-0.4em}
+\subsection*{Educación}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{Universidad Politécnica de Madrid}}
+		{\textbf{Boadilla, Madrid}}
+	\\
+	\headerrow
+		{\emph{Escuela Técnica Superior de Ingenieros Informáticos}}
+		{\emph{Actualidad}}
+	\begin{itemize*}
+		\item Grado en Ingeniería Informática.
+	\end{itemize*}
+	
+	\item 
+	\headerrow
+	{\textbf{IES Las Encinas}}
+	{\textbf{Villanueva de la Cañada, Madrid}}
+	\\
+	\headerrow
+	{\emph{}}
+	{\emph{2005 -- 2011}}
+	\begin{itemize*}
+		\item Educación Secundaria Obligatoria.
+		\item Educación Secundaria, Bachillerato.
+	\end{itemize*}
+	
+
+\end{itemize}
+
+
+
+\vspace{-0.4em}
+\subsection*{Conocimientos Informáticos.}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	 \textbf{Lenguajes Y Tecnologías :}	
+		\subitem Básico: Python, Ruby, Ruby on Rails, JavaScript.
+		\subitem Medio: HTML/CSS, \CPP, C\#, PHP, \LaTeX.
+		\subitem Avanzado: C, Java,\LaTeX, Bash, SQL.\\
+	 \textbf{Sistemas Operativos :}			
+		 \subitem Microsoft Windows.
+		 \subitem Linux.
+		
+
+\end{description*}
+\end{indentsection}
+
+\subsection*{Idiomas.}
+
+\begin{indentsection}{\parindent}
+	\hyphenpenalty=1000
+	\begin{description*}
+		
+		\subitem \textbf{Español:} Nativo
+		\subitem \textbf{Inglés :} Nivel B2.
+		
+	\end{description*}
+\end{indentsection}
+
+\end{itemize}
+\end{document}
